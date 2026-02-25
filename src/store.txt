@@ -1,0 +1,19 @@
+    <div className="info">
+           
+          </div>
+
+          <div className="info">
+            <h2 className="schedule">Pricing</h2>
+
+            <p className="times">Youth: $60/month</p>
+            <p className="times">Adult: $70/month</p>
+            <p className="times">Drop-ins: $10/session</p>
+          </div>
+
+              <div className="info">
+            <h2 className="schedule">Contact Us</h2>
+
+            <p className="times">📞 519-868-3151</p>
+            <p className="times">✉ oconnork@hay.net</p>
+
+          </div>

@@ -1,0 +1,52 @@
+.contact {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+    justify-content: center;
+
+}
+
+.contact-title {
+  font-size: 2rem;
+  font-family: 'open sans', sans-serif;
+  color: #4f89bf;
+  margin-bottom: 2rem;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  font-size: 1.1rem;
+}
+
+.contact-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  color: #ccc;
+}
+
+.facebook-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4f89bf;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.facebook-link:hover {
+  color: #82b6ff;
+}
+
+.facebook-icon {
+  width: 24px;
+  height: 24px;
+}

@@ -1,0 +1,21 @@
+.about {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.about-details {
+  line-height: 3.8;
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #555;
+  padding: 0 1rem;
+}

@@ -14,10 +14,10 @@ function RingContact() {
 
         <div className="contact-item">
           <span className="contact-label">📧 Email</span>
-          <p>info@ringlondonboxing.com</p>
+          <p>oconnork@hay.net</p>
         </div>
 
-        <div className="contact-item facebook">
+        <div className="contact-item">
           <a
             href="https://www.facebook.com/groups/YOURGROUP"
             target="_blank"

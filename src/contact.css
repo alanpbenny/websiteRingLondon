@@ -3,8 +3,9 @@
   color: white;
   text-align: center;
   padding: 3rem 2rem;
-    justify-content: center;
-
+ display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers the block */
 }
 
 .contact-title {
@@ -12,6 +13,7 @@
   font-family: 'open sans', sans-serif;
   color: #4f89bf;
   margin-bottom: 2rem;
+  align-items: center;   /* centers the block */
 }
 
 .contact-container {
@@ -19,10 +21,16 @@
   justify-content: center;
   gap: 3rem;
   flex-wrap: wrap;
+  text-align: left;     /* left-align content inside */
+  max-width: 800px;
+  width: 100%;
+
 }
 
 .contact-item {
   font-size: 1.1rem;
+  text-align: left;
+  min-width: 200px;
 }
 
 .contact-label {

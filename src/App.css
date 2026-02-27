@@ -100,6 +100,16 @@ body {
   border-radius: 10px;
 }
 
+.program-h2 {
+  font-size: 1.5rem;
+  color: #4f89bf;
+  margin-top: 1rem;
+}
+.program-p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 1rem;
+}
 
 
 @media (max-width: 1500px) {

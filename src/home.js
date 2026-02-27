@@ -31,8 +31,8 @@ export default function Home() {
         <section className="programs">
           <div className="program">
             <img src="/fitness.jpg" alt="Fitness" className="weofferImage" />
-            <h2>Fitness</h2>
-            <p>BoxFit, conditioning, strength training for all levels.</p>
+            <h2 className = "program-h2">Fitness</h2>
+            <p className = "program-p">Lose weight, build muscle, and improve cardiovascular health.</p>
           </div>
 
           <div className="program">
@@ -41,8 +41,8 @@ export default function Home() {
               alt="Competition"
               className="weofferImage"
             />
-            <h2>Competition</h2>
-            <p>Amateur team, sparring, and fight camp preparation.</p>
+            <h2 className = "program-h2">Competition</h2>
+            <p className = "program-p">Join the amateur boxing team, sparring, and fight camp preparation.</p>
           </div>
 
           <div className="program youth">
@@ -51,8 +51,8 @@ export default function Home() {
               alt="Youth Boxing"
               className="weofferImage"
             />
-            <h2>Youth Boxing</h2>
-            <p>Kids and teen classes focused on discipline and fitness.</p>
+            <h2 className = "program-h2">Youth Boxing</h2>
+            <p className = "program-p">Kids and teen classes focused on discipline and fundamentals.</p>
           </div>
         </section>
 

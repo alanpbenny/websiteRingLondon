@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .nav {
   background-color: black;
   color: white;
@@ -15,10 +16,36 @@ body {
   padding: 0 1rem;
 }
 
+.sidebar{
+  position:fixed;
+  top:0;
+  right:0;
+  height:100%;
+  width:250px;
+  background-color: black;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  align-items: flex-start;;
+  gap: 2rem;
+
+}
+
+.sidebar a{
+  width: 100%;
+}
+/* Hamburger menu for phone */
+@media (max-width: 1000px) {
+
+}
+
 .nav a {
+  font-size: 1.2rem;
   text-decoration: none;
   color: white;
   font-weight: 500;
+  padding: 0 20px;
 }
 
 .nav a:visited {
@@ -34,7 +61,7 @@ body {
   margin: 0;
   display: flex;
   list-style-type: none;
-  display:flex;
+  display: flex;
   gap: 2rem;
 }
 

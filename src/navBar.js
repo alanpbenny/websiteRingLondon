@@ -9,7 +9,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="nav">
+    <nav>
       <img src="/ring-london-logo.png" alt="Ring London Logo" />
       <ul>
         {options.map((item) => (
@@ -22,6 +22,8 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
+ 
     </nav>
+    
   );
 }

@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 export default function Navbar() {
   const options = [
     { title: "Schedule", to: "/#schedule", id: 1 },
@@ -9,7 +8,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav>
+    <nav class="nav">
       <img src="/ring-london-logo.png" alt="Ring London Logo" />
       <ul>
         {options.map((item) => (

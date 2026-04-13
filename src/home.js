@@ -10,7 +10,6 @@ export default function Home() {
   const location = useLocation();
 
   useEffect(() => {
-    if (!location.hash) return;
 
     const id = location.hash.slice(1); // remove '#'
     const el = document.getElementById(id);

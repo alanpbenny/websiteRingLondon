@@ -48,26 +48,67 @@ body {
   padding: 0 20px;
 }
 
-.nav a:visited {
+.normal a:visited {
   color: white;
 }
 
-.nav a:hover {
+.normal a:hover {
+  color: red;
+}
+.sidebar a:visited {
+  color: white;
+}
+
+.sidebar a:hover {
   color: red;
 }
 
-.nav ul{
+.normal{
   padding : 0;
   margin: 0;
   display: flex;
   list-style-type: none;
-  display: flex;
   gap: 2rem;
 }
 
 .nav img {
   height: 100px;
   width: auto;
+}
+
+.sidebar {
+  list-style: none;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: black;
+  display: none;
+}
+.sidebar.show {
+  display: flex;
+}
+
+.sidebar li{
+  width: 100%;
+}
+
+.sidebar a{
+  width: 100%
+}
+
+.sidebar img,
+.normal img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  filter: invert(1);
 }
 
 .title {

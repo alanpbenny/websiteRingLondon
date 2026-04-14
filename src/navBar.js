@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import Close from "./close.svg";
+import Hamburger from "./ham.svg";
+
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
   const options = [
     { title: "Schedule", to: "/#schedule", id: 1 },
     { title: "Membership", to: "/membership", id: 2 },
@@ -8,21 +14,32 @@ export default function Navbar() {
   ];
 
   return (
-    <nav class="nav">
+    <nav className="nav">
       <img src="/ring-london-logo.png" alt="Ring London Logo" />
-      <ul>
+
+      {/* Sidebar */}
+      <ul className={`sidebar ${open ? "show" : ""}`}>
+        <li onClick={() => setOpen(false)}>
+          <img src={Close} alt="Close menu" />
+        </li>
         {options.map((item) => (
           <li key={item.id}>
-            {item.to ? (
-              <Link to={item.to}>{item.title}</Link>
-            ) : (
-              <a href={item.href}>{item.title}</a>
-            )}
+            <Link to={item.to}>{item.title}</Link>
           </li>
         ))}
       </ul>
- 
+
+      {/* Normal nav */}
+      <ul className="normal">
+        {options.map((item) => (
+          <li key={item.id}>
+            <Link to={item.to}>{item.title}</Link>
+          </li>
+        ))}
+        <li onClick={() => setOpen(!open)}>
+          <img src={Hamburger} alt="Hamburger menu icon" />
+        </li>
+      </ul>
     </nav>
-    
   );
 }

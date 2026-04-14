@@ -10,28 +10,32 @@ export default function Home() {
   const location = useLocation();
 
   useEffect(() => {
+    if (!location.hash) return;
 
-    const id = location.hash.slice(1); // remove '#'
+    const id = location.hash.slice(1);
     const el = document.getElementById(id);
 
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [location.hash]);
+
   return (
     <div>
       <Navbar />
       <div>
-        <h1 className="title">The Oldest Boxing gym in London</h1>
-        <p className="sub-title">Serving the community since 1950</p>
+        <h1 className="title">Welcome to London's oldest boxing gym</h1>
+        <p className="sub-title">Serving the community since 1975</p>
         <HeroSlider />
         <p className="disclaimer">What We Offer:</p>
 
         <section className="programs">
           <div className="program">
             <img src="/fitness.jpg" alt="Fitness" className="weofferImage" />
-            <h2 className = "program-h2">Fitness</h2>
-            <p className = "program-p">Lose weight, build muscle, and improve cardiovascular health.</p>
+            <h2 className="program-h2">Fitness</h2>
+            <p className="program-p">
+              Lose weight, build muscle, and improve cardiovascular health.
+            </p>
           </div>
 
           <div className="program">
@@ -40,8 +44,10 @@ export default function Home() {
               alt="Competition"
               className="weofferImage"
             />
-            <h2 className = "program-h2">Competition</h2>
-            <p className = "program-p">Join the amateur boxing team, sparring, and fight camp preparation.</p>
+            <h2 className="program-h2">Competition</h2>
+            <p className="program-p">
+              Join the amateur boxing team, sparring, and fight camp preparation.
+            </p>
           </div>
 
           <div className="program youth">
@@ -50,8 +56,10 @@ export default function Home() {
               alt="Youth Boxing"
               className="weofferImage"
             />
-            <h2 className = "program-h2">Youth Boxing</h2>
-            <p className = "program-p">Kids and teen classes focused on discipline and fundamentals.</p>
+            <h2 className="program-h2">Youth Boxing</h2>
+            <p className="program-p">
+              Kids and teen classes focused on discipline and fundamentals.
+            </p>
           </div>
         </section>
 
@@ -76,8 +84,8 @@ export default function Home() {
             <GymMap />
           </div>
         </section>
+
         <div id="contact">
-          {" "}
           <RingContact />
         </div>
       </div>

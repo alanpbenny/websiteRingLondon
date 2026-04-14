@@ -90,6 +90,10 @@ body {
   z-index: 999;
   background-color: black;
   display: none;
+
+
+  padding: 2rem 1.5rem;   /* 🔥 adds spacing inside */
+  gap: 2.5rem;            /* spacing between items */
 }
 .sidebar.show {
   display: flex;
@@ -97,11 +101,24 @@ body {
 
 .sidebar li{
   width: 100%;
+  justify-content: center;  /* 🔥 centers text horizontally */
+
 }
 
-.sidebar a{
-  width: 100%
+.sidebar a,
+.sidebar button {
+  display: block;        /* 🔥 THIS is what you're missing */
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+
 }
+.sidebar button:hover,
+.normal button:hover {
+  color: red;
+}
+
+
 
 .sidebar img,
 .normal img {
@@ -248,9 +265,22 @@ body {
   border: 0;
   border-radius: 10px; /* optional */
 }
+.normal button,
+.sidebar button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
 
 @media (max-width: 800px) {
   .information {
     grid-template-columns: 1fr;
   }
+  .normalNav{
+    display: none;
+  }
+  
 }
+

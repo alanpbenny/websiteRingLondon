@@ -8,6 +8,7 @@ background-color: #f6f4f0;
 }
 
 .membership h1 {
+    padding-top: 7rem;
     text-align: center;
     font-size: 3rem;
     margin-bottom: 2rem;
@@ -28,6 +29,8 @@ background-color: #f6f4f0;
     margin: 2rem auto;
     max-width: 100%;
     height: auto;
+    padding-bottom: 7rem;
+
 }
 
 

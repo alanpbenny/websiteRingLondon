@@ -1,147 +1,164 @@
-
-
-
 body {
   margin: 0;
   padding: 0;
 }
 
+/* ─── NAV ─── */
 .nav {
   background-color: black;
   color: white;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 2rem;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.sidebar{
-  position:fixed;
-  top:0;
-  right:0;
-  height:100%;
-  width:250px;
-  background-color: black;
-  z-index: 999;
+.nav img {
+  height: 80px;
+  width: auto;
+}
+
+/* Normal (desktop) nav list */
+.normal {
+  padding: 0;
+  margin: 0;
   display: flex;
-  flex-direction: column;
-  align-items:flex-start;
-  align-items: flex-start;;
-  gap: 2rem;
-
+  list-style-type: none;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.sidebar a{
-  width: 100%;
-}
-/* Hamburger menu for phone */
-@media (max-width: 1000px) {
-
-}
-
-.nav a {
-  font-size: 1.2rem;
+.normal a,
+.normal button {
+  font-size: 1rem;
   text-decoration: none;
   color: white;
   font-weight: 500;
-  padding: 0 20px;
+  padding: 0.5rem 0.75rem;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .normal a:visited {
   color: white;
 }
-
-.normal a:hover {
-  color: red;
-}
-.sidebar a:visited {
-  color: white;
-}
-
-.sidebar a:hover {
+.normal a:hover,
+.normal button:hover {
   color: red;
 }
 
-.normal{
-  padding : 0;
-  margin: 0;
-  display: flex;
-  list-style-type: none;
-  gap: 2rem;
+/* Hamburger icon — hide on desktop, show on mobile */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  line-height: 0;
 }
 
-.nav img {
-  height: 100px;
-  width: auto;
+.hamburger-btn img {
+  width: 28px;
+  height: 28px;
+  filter: invert(1);
 }
 
+/* ─── SIDEBAR ─── */
 .sidebar {
   list-style: none;
-  justify-content: flex-start;
-  align-items: flex-start;
+  margin: 0;
+  padding: 1.5rem 1.25rem;
+  display: none;
   flex-direction: column;
+  gap: 0.5rem;
   position: fixed;
   z-index: 999;
   top: 0;
   right: 0;
   height: 100vh;
-  width: 250px;
-  z-index: 999;
+  width: 240px;
   background-color: black;
-  display: none;
-
-
-  padding: 2rem 1.5rem;   /* 🔥 adds spacing inside */
-  gap: 2.5rem;            /* spacing between items */
+  box-sizing: border-box;
 }
+
 .sidebar.show {
   display: flex;
 }
 
-.sidebar li{
+.sidebar li {
   width: 100%;
-  justify-content: center;  /* 🔥 centers text horizontally */
-
 }
 
 .sidebar a,
 .sidebar button {
-  display: block;        /* 🔥 THIS is what you're missing */
-  text-align: center;
+  display: block;
+  text-align: left;
   width: 100%;
-  padding: 10px 0;
-
+  padding: 0.75rem 0.5rem;
+  font-size: 1.1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-bottom: 1px solid #222;
+  box-sizing: border-box;
 }
-.sidebar button:hover,
-.normal button:hover {
+
+.sidebar a:visited {
+  color: white;
+}
+.sidebar a:hover,
+.sidebar button:hover {
   color: red;
 }
 
-
-
-.sidebar img,
-.normal img {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-  filter: invert(1);
+/* Close button row */
+.sidebar .close-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
 }
 
-.title {
-  font-size: 2.5rem;
-  font-family: 'open sans', sans-serif;
-  display: flex;
-  justify-content: center;
+.sidebar .close-row img {
+  width: 28px;
+  height: 28px;
+  filter: invert(1);
+  cursor: pointer;
+}
 
+/* ─── RESPONSIVE BREAKPOINTS ─── */
+@media (max-width: 800px) {
+  .normalNav {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: block;
+  }
+}
+
+/* ─── HOME PAGE ─── */
+.title {
+  font-size: 2rem;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  padding: 1.5rem 1rem 0;
+  margin: 0;
 }
 
 .sub-title {
-  font-size: 1.5rem;
-  font-family: 'open sans', sans-serif;
+  font-size: 1.1rem;
+  font-family: 'Open Sans', sans-serif;
   color: #555;
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  margin: 0.5rem 0 0;
+  padding: 0 1rem;
 }
 
 .main01 {
@@ -153,134 +170,160 @@ body {
 }
 
 .disclaimer {
-  font-size: 2rem;
-  font-family: 'open sans', sans-serif;
+  font-size: 1.8rem;
+  font-family: 'Open Sans', sans-serif;
   color: #230a4b;
-  display: flex;
-  justify-content: center;
-  padding-top: 10rem;
+  text-align: center;
+  padding: 3rem 1rem 1rem;
+  margin: 0;
 }
 
-
+/* ─── PROGRAMS GRID ─── */
 .programs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 1rem 2rem;
-  justify-items: center; /* center cards inside columns */
-  padding-bottom: 10rem;
+  gap: 1.5rem;
+  padding: 1rem 2rem 6rem;
+  justify-items: center;
 }
-
-
 
 .program {
   width: 100%;
   max-width: 350px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   background: #111;
   color: white;
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center;
   border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.weofferImage {
+  height: 160px;
+  width: 100%;
+  max-width: 260px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
 }
 
 .program-h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #4f89bf;
-  margin-top: 1rem;
+  margin: 0.75rem 0 0.5rem;
 }
+
 .program-p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #ccc;
-  margin-top: 1rem;
+  margin: 0;
+  line-height: 1.5;
 }
 
-
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   .programs {
     grid-template-columns: 1fr;
+    padding: 1rem 1.25rem 4rem;
+  }
+
+  .program {
+    max-width: 100%;
+  }
+
+  .weofferImage {
+    height: 200px;
+    max-width: 100%;
   }
 }
-.weofferImage {
-  justify-content: center;
-  display:flex;
-  height: 200px;
-  width: 300px;
-  margin: 2rem;
-}
 
-
-.information{
+/* ─── INFO / SCHEDULE SECTION ─── */
+.information {
   background-color: black;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  padding: 1rem 2rem;
-  justify-content: center; /* 🔥 vertical center */
+  padding: 2rem;
+  align-items: start;
+}
+
+.info {
+  padding: 1rem;
+  border-radius: 10px;
   text-align: center;
 }
 
-.info{
-  padding: 2rem;
-  border-radius: 10px;
+.schedule {
+  font-size: 1.8rem;
+  font-family: 'Open Sans', sans-serif;
+  color: #4f89bf;
+  margin: 0 0 1rem;
+}
+
+.times {
+  font-size: 1.2rem;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(236, 237, 239);
+  margin: 0.4rem 0;
+}
+
+.address {
+  font-size: 1.1rem;
+  padding-top: 2rem;
+  color: white;
+  line-height: 1.8;
 }
 
 .map-column {
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
-.schedule {
-  font-size: 2rem;
-  font-family: 'open sans', sans-serif;
-  color: #4f89bf;
-}
-
-.times {
-  font-size: 1.5rem;
-  font-family: 'open sans', sans-serif;
-  color: rgb(236, 237, 239);
-}
-
-.address {
-  font-size: 1.5rem;
-  padding-top: 3rem;
-  color: white;
-}
 .map {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 1rem 2rem; /* optional */
+  padding: 0.5rem 0;
   box-sizing: border-box;
 }
 
 .map-iframe {
   width: 100%;
-  height: 400px;
+  height: 350px;
   border: 0;
-  border-radius: 10px; /* optional */
-}
-.normal button,
-.sidebar button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.2rem;
-  cursor: pointer;
+  border-radius: 10px;
 }
 
 @media (max-width: 800px) {
   .information {
     grid-template-columns: 1fr;
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
   }
-  .normalNav{
-    display: none;
-  }
-  
-}
 
+  .map-iframe {
+    height: 280px;
+  }
+
+  .schedule {
+    font-size: 1.4rem;
+  }
+
+  .times {
+    font-size: 1rem;
+  }
+
+  .disclaimer {
+    font-size: 1.4rem;
+    padding-top: 2rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}

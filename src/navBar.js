@@ -29,47 +29,56 @@ export default function Navbar() {
     }
   };
 
+  const renderNavItem = (item, inSidebar = false) => {
+    if (item.title === "Schedule" || item.title === "Contact") {
+      return (
+        <button onClick={() => scrollToSection(item.title.toLowerCase())}>
+          {item.title}
+        </button>
+      );
+    }
+    return (
+      <Link to={item.to} onClick={() => inSidebar && setOpen(false)}>
+        {item.title}
+      </Link>
+    );
+  };
+
   return (
     <nav className="nav">
       <img src="/ring-london-logo.png" alt="Ring London Logo" />
 
+      {/* Sidebar (mobile) */}
       <ul className={`sidebar ${open ? "show" : ""}`}>
-        <li onClick={() => setOpen(false)}>
-          <img src={Close} alt="Close menu" />
+        <li className="close-row">
+          <img
+            src={Close}
+            alt="Close menu"
+            onClick={() => setOpen(false)}
+          />
         </li>
-
         {options.map((item) => (
-          <li key={item.id}>
-            {item.title === "Schedule" || item.title === "Contact" ? (
-              <button onClick={() => scrollToSection(item.title.toLowerCase())}>
-                {item.title}
-              </button>
-            ) : (
-              <Link to={item.to} onClick={() => setOpen(false)}>
-                {item.title}
-              </Link>
-            )}
-          </li>
+          <li key={item.id}>{renderNavItem(item, true)}</li>
         ))}
       </ul>
 
+      {/* Desktop nav links */}
       <ul className="normal">
         {options.map((item) => (
           <li className="normalNav" key={item.id}>
-            {item.title === "Schedule" || item.title === "Contact" ? (
-              <button onClick={() => scrollToSection(item.title.toLowerCase())}>
-                {item.title}
-              </button>
-            ) : (
-              <Link to={item.to}>{item.title}</Link>
-            )}
+            {renderNavItem(item, false)}
           </li>
         ))}
-
-        <li onClick={() => setOpen(!open)}>
-          <img src={Hamburger} alt="Hamburger menu icon" />
-        </li>
       </ul>
+
+      {/* Hamburger — always visible, sits outside normal list */}
+      <button
+        className="hamburger-btn"
+        onClick={() => setOpen(!open)}
+        aria-label="Open menu"
+      >
+        <img src={Hamburger} alt="Menu" />
+      </button>
     </nav>
   );
 }

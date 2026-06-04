@@ -19,7 +19,7 @@ function RingContact() {
 
         <div className="contact-item">
           <a
-            href="https://www.facebook.com/groups/YOURGROUP"
+            href="https://www.facebook.com/groups/24926263354"
             target="_blank"
             rel="noopener noreferrer"
             className="facebook-link"

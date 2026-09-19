@@ -9,7 +9,7 @@ function RingContact() {
       <div className="contact-container">
         <div className="contact-item">
           <span className="contact-label">📞 Phone</span>
-          <p>(519) 555-1234</p>
+          <p>(519) 868-3151</p>
         </div>
 
         <div className="contact-item">

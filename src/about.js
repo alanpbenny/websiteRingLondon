@@ -13,8 +13,8 @@ export default function About() {
 
                 <p className="about-details">
                     Ring London Boxing Gym has been a cornerstone of the London
-                    boxing community since 1975. Ran by Frank McGrath and Ken
-                    McNorgan for the first 20 years. Our gym has a rich history
+                    boxing community since 1975. Founded by Frank McGrath and Ken
+                    McNorgan. Our gym has a rich history
                     of training champions and fostering a love for the sport.
                     We are dedicated to providing a welcoming and inclusive
                     environment for boxers of all ages and skill levels. Our

@@ -33,48 +33,51 @@ export default function About() {
                     {/* Coach 1 */}
                     <div className="coach">
                         <div className="coach-image">
-                            {/* Add coach image here later */}
+                            <img
+                                src="/kellyIMG.png"
+                                alt="Kelly O'Conner"
+                                className="weofferImage"
+                            />
                         </div>
 
                         <h3 className="coach-name">Kelly O'Conner</h3>
 
                         <p className="coach-details">
-                            Write a description about this coach here. You can
-                            talk about their boxing experience, coaching
-                            experience, accomplishments, and what they bring
-                            to the gym.
+                            34 years of coaching experience.
                         </p>
                     </div>
 
                     {/* Coach 2 */}
                     <div className="coach">
                         <div className="coach-image">
-                            {/* Add coach image here later */}
+                            <img
+                                src="/adamIMG.png"
+                                alt="Adam Buckley"
+                                className="weofferImage"
+                            />
                         </div>
 
                         <h3 className="coach-name">Adam</h3>
 
                         <p className="coach-details">
-                            Write a description about this coach here. You can
-                            talk about their boxing experience, coaching
-                            experience, accomplishments, and what they bring
-                            to the gym.
+                            20 years of experience.
                         </p>
                     </div>
 
                     {/* Coach 3 */}
                     <div className="coach">
                         <div className="coach-image">
-                            {/* Add coach image here later */}
+                            <img
+                                src="/jeffIMG.png"
+                                alt="Jeff Boyd"
+                                className="weofferImage"
+                            />
                         </div>
 
                         <h3 className="coach-name">Jeff Boyd</h3>
 
                         <p className="coach-details">
-                            Write a description about this coach here. You can
-                            talk about their boxing experience, coaching
-                            experience, accomplishments, and what they bring
-                            to the gym.
+                            20 years of expereience.
                         </p>
                     </div>
 
